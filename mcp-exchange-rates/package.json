@@ -1,0 +1,42 @@
+{
+  "name": "mcp-exchange-rates",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for live and historical foreign-exchange rates, powered by the free Frankfurter API (European Central Bank data). Exposes convert, latest, and history tools.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-exchange-rates": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "exchange-rates",
+    "currency",
+    "forex",
+    "frankfurter",
+    "claude"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "mcp-wikipedia",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for Wikipedia: search articles, fetch summaries, and read full article text via the public Wikipedia REST/Action APIs. No API key required.",
+  "type": "module",
+  "license": "MIT",
+  "author": "mcp-catalog",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "wikipedia",
+    "claude",
+    "llm",
+    "ai-tools"
+  ],
+  "bin": {
+    "mcp-wikipedia": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs",
+    "test": "npm run build && node smoke-test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}
