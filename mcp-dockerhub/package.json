@@ -1,0 +1,43 @@
+{
+  "name": "mcp-dockerhub",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for the Docker Hub public API. Inspect image repositories and list tags with no API key required.",
+  "type": "module",
+  "license": "MIT",
+  "author": "mcp-catalog",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "docker",
+    "docker-hub",
+    "dockerhub",
+    "containers",
+    "claude"
+  ],
+  "bin": {
+    "mcp-dockerhub": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs",
+    "prepare": "tsc"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

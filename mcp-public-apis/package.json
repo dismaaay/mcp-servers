@@ -1,0 +1,37 @@
+{
+  "name": "mcp-public-apis",
+  "version": "1.0.0",
+  "description": "MCP server for the Public APIs Directory — search 1500+ free public APIs and browse categories, no API key required.",
+  "type": "module",
+  "license": "MIT",
+  "author": "mcp-catalog",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "public-apis",
+    "api-directory",
+    "claude"
+  ],
+  "bin": {
+    "mcp-public-apis": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

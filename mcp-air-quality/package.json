@@ -1,0 +1,44 @@
+{
+  "name": "mcp-air-quality",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for real-time air quality data via the Open-Meteo Air Quality API (no API key required).",
+  "type": "module",
+  "bin": {
+    "mcp-air-quality": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "air-quality",
+    "aqi",
+    "open-meteo",
+    "pm2.5",
+    "pollution",
+    "claude"
+  ],
+  "license": "MIT",
+  "author": "mcp-catalog",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

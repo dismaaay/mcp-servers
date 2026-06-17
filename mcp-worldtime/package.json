@@ -1,0 +1,41 @@
+{
+  "name": "mcp-worldtime",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for world time and timezone lookups (worldtimeapi.org, no API key).",
+  "type": "module",
+  "license": "MIT",
+  "author": "mcp-catalog",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "worldtime",
+    "timezone",
+    "time",
+    "claude"
+  ],
+  "bin": {
+    "mcp-worldtime": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

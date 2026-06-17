@@ -1,0 +1,41 @@
+{
+  "name": "mcp-stackexchange",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for the Stack Exchange API (Stack Overflow). Search questions and fetch answers from the command line or any MCP client.",
+  "type": "module",
+  "bin": {
+    "mcp-stackexchange": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "stackexchange",
+    "stackoverflow",
+    "llm",
+    "ai"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

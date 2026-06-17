@@ -1,0 +1,36 @@
+{
+  "name": "mcp-rss",
+  "version": "1.0.0",
+  "description": "MCP server that fetches and parses any RSS or Atom feed URL (no API key required).",
+  "type": "module",
+  "bin": {
+    "mcp-rss": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rss",
+    "atom",
+    "feed",
+    "news"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mcp-sitemap",
+  "version": "1.0.0",
+  "description": "MCP server that fetches and parses sitemap.xml URLs (no API key required)",
+  "type": "module",
+  "bin": {
+    "mcp-sitemap": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sitemap",
+    "seo",
+    "crawler"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
