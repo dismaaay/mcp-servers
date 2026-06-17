@@ -1,0 +1,41 @@
+{
+  "name": "mcp-openfda",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for the openFDA API: search drug labels, query adverse-event reports, and look up drug recalls.",
+  "type": "module",
+  "license": "MIT",
+  "author": "mcp-catalog",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openfda",
+    "fda",
+    "drug-labels",
+    "adverse-events",
+    "recalls"
+  ],
+  "bin": {
+    "mcp-openfda": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "smoke": "node smoke-test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

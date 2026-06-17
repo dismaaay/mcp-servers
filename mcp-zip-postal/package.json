@@ -1,20 +1,19 @@
 {
-  "name": "mcp-http-fetch",
+  "name": "mcp-zip-postal",
   "version": "1.0.0",
-  "description": "An MCP server that performs HTTP requests (GET/POST) to any URL and fetches JSON — no API key required.",
+  "description": "MCP server for postal/ZIP code lookups worldwide via the free Zippopotam.us API — no API key required.",
   "type": "module",
   "license": "MIT",
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "http",
-    "fetch",
-    "rest",
-    "json",
-    "claude"
+    "postal-code",
+    "zip-code",
+    "zippopotam",
+    "geocoding"
   ],
   "bin": {
-    "mcp-http-fetch": "dist/index.js"
+    "mcp-zip-postal": "dist/index.js"
   },
   "files": [
     "dist",
@@ -24,11 +23,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
-    "smoke": "node smoke-test.mjs",
-    "prepublishOnly": "npm run build"
-  },
-  "engines": {
-    "node": ">=18"
+    "smoke": "node smoke-test.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
@@ -36,7 +31,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "tsx": "^4.19.0",
+    "tsx": "^4.16.0",
     "typescript": "^5.5.0"
   }
 }

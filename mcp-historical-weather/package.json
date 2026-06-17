@@ -1,0 +1,42 @@
+{
+  "name": "mcp-historical-weather",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server that exposes historical daily weather data from the Open-Meteo Archive (no API key required).",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-historical-weather": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "weather",
+    "historical-weather",
+    "open-meteo",
+    "climate",
+    "llm",
+    "ai"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

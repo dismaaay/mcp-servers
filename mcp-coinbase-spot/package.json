@@ -1,0 +1,41 @@
+{
+  "name": "mcp-coinbase-spot",
+  "version": "1.0.0",
+  "description": "MCP server exposing Coinbase public spot prices and exchange rates (no API key required).",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-coinbase-spot": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "smoke": "node smoke-test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "coinbase",
+    "crypto",
+    "bitcoin",
+    "spot-price",
+    "exchange-rates"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

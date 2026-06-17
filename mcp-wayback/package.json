@@ -1,0 +1,43 @@
+{
+  "name": "mcp-wayback",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for the Internet Archive Wayback Machine. Find and list archived snapshots of any URL.",
+  "type": "module",
+  "bin": {
+    "mcp-wayback": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "wayback-machine",
+    "internet-archive",
+    "web-archive",
+    "cdx",
+    "llm",
+    "ai"
+  ],
+  "license": "MIT",
+  "author": "",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}

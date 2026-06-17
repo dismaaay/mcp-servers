@@ -1,0 +1,45 @@
+{
+  "name": "mcp-gutenberg",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for Project Gutenberg — search and retrieve 70,000+ free public-domain ebooks via the Gutendex API (no key required).",
+  "type": "module",
+  "license": "MIT",
+  "author": "mcp-catalog",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gutenberg",
+    "gutendex",
+    "ebooks",
+    "public-domain",
+    "books",
+    "llm",
+    "claude"
+  ],
+  "bin": {
+    "mcp-gutenberg": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "smoke": "node smoke-test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

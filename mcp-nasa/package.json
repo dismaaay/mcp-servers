@@ -1,0 +1,44 @@
+{
+  "name": "mcp-nasa",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server wrapping NASA's open APIs (APOD and NeoWs near-earth objects). Works out of the box with NASA's DEMO_KEY, no signup required.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-nasa": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "smoke": "node smoke-test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nasa",
+    "apod",
+    "neows",
+    "asteroids",
+    "astronomy",
+    "ai",
+    "llm",
+    "claude"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

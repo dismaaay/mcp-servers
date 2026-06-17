@@ -1,20 +1,21 @@
 {
-  "name": "mcp-http-fetch",
+  "name": "mcp-sec-edgar",
   "version": "1.0.0",
-  "description": "An MCP server that performs HTTP requests (GET/POST) to any URL and fetches JSON — no API key required.",
+  "description": "Model Context Protocol server for SEC EDGAR: look up companies, list recent filings, and fetch XBRL company facts.",
   "type": "module",
   "license": "MIT",
+  "author": "mcp-catalog",
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "http",
-    "fetch",
-    "rest",
-    "json",
-    "claude"
+    "sec",
+    "edgar",
+    "filings",
+    "xbrl",
+    "finance"
   ],
   "bin": {
-    "mcp-http-fetch": "dist/index.js"
+    "mcp-sec-edgar": "dist/index.js"
   },
   "files": [
     "dist",
@@ -22,13 +23,9 @@
   ],
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
-    "smoke": "node smoke-test.mjs",
-    "prepublishOnly": "npm run build"
-  },
-  "engines": {
-    "node": ">=18"
+    "start": "node dist/index.js",
+    "smoke": "node smoke-test.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",

@@ -1,25 +1,27 @@
 {
-  "name": "mcp-http-fetch",
+  "name": "mcp-worldbank",
   "version": "1.0.0",
-  "description": "An MCP server that performs HTTP requests (GET/POST) to any URL and fetches JSON — no API key required.",
+  "description": "Model Context Protocol server for the World Bank Indicators API — query development indicators, search the indicator catalog, and list countries. No API key required.",
   "type": "module",
   "license": "MIT",
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "http",
-    "fetch",
-    "rest",
-    "json",
-    "claude"
+    "world-bank",
+    "indicators",
+    "economics",
+    "gdp",
+    "data",
+    "llm"
   ],
   "bin": {
-    "mcp-http-fetch": "dist/index.js"
+    "mcp-worldbank": "dist/index.js"
   },
   "files": [
     "dist",
     "README.md"
   ],
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
@@ -31,12 +33,12 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.6.0"
   }
 }

@@ -1,0 +1,45 @@
+{
+  "name": "mcp-marine-weather",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server exposing marine weather (wave height, period, direction, swell, sea surface temperature) from the free Open-Meteo Marine API.",
+  "type": "module",
+  "license": "MIT",
+  "author": "mcp-catalog",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "marine",
+    "weather",
+    "ocean",
+    "waves",
+    "open-meteo",
+    "claude"
+  ],
+  "bin": {
+    "mcp-marine-weather": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "smoke": "node smoke-test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

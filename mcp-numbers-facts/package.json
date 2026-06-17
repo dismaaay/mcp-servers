@@ -1,34 +1,36 @@
 {
-  "name": "mcp-http-fetch",
+  "name": "mcp-numbers-facts",
   "version": "1.0.0",
-  "description": "An MCP server that performs HTTP requests (GET/POST) to any URL and fetches JSON — no API key required.",
+  "description": "Model Context Protocol (MCP) server exposing number, math, and date trivia facts (Numbers API style) over stdio.",
   "type": "module",
   "license": "MIT",
+  "author": "mcp-catalog",
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "http",
-    "fetch",
-    "rest",
-    "json",
+    "numbers-api",
+    "trivia",
+    "facts",
+    "llm",
     "claude"
   ],
   "bin": {
-    "mcp-http-fetch": "dist/index.js"
+    "mcp-numbers-facts": "dist/index.js"
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
     "smoke": "node smoke-test.mjs",
     "prepublishOnly": "npm run build"
-  },
-  "engines": {
-    "node": ">=18"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
@@ -37,6 +39,6 @@
   "devDependencies": {
     "@types/node": "^22.0.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.6.0"
   }
 }
